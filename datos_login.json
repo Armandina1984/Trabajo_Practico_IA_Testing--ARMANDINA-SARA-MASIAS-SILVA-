@@ -1,0 +1,92 @@
+[
+	{
+		"id": "LOGIN-001",
+		"descripcion": "Inicio de sesión con credenciales válidas de un usuario ficticio registrado en el entorno de pruebas.",
+		"correo": "qa.login.valido@example.com",
+		"password": "Ficticia-Login-01!",
+		"tipoPrueba": "Positiva",
+		"criterioAceptacion": "CA01: Inicio de sesión exitoso",
+		"resultadoEsperado": "El sistema permite el acceso a la cuenta."
+	},
+	{
+		"id": "LOGIN-002",
+		"descripcion": "Inicio de sesión con correo registrado y contraseña incorrecta.",
+		"correo": "qa.login.valido@example.com",
+		"password": "Ficticia-Login-Erronea",
+		"tipoPrueba": "Negativa",
+		"criterioAceptacion": "CA02: Credenciales incorrectas",
+		"resultadoEsperado": "El sistema muestra un mensaje de error y no permite el acceso."
+	},
+	{
+		"id": "LOGIN-003",
+		"descripcion": "Inicio de sesión con correo que no corresponde a un usuario registrado.",
+		"correo": "qa.no.registrado@example.com",
+		"password": "Ficticia-Login-02!",
+		"tipoPrueba": "Negativa",
+		"criterioAceptacion": "CA02: Credenciales incorrectas",
+		"resultadoEsperado": "El sistema muestra un mensaje de error y no permite el acceso."
+	},
+	{
+		"id": "LOGIN-004",
+		"descripcion": "Envío del formulario con el correo vacío y la contraseña completada.",
+		"correo": "",
+		"password": "Ficticia-Login-03!",
+		"tipoPrueba": "Negativa",
+		"criterioAceptacion": "CA03: Campos obligatorios",
+		"resultadoEsperado": "El sistema muestra una validación del campo obligatorio correo."
+	},
+	{
+		"id": "LOGIN-005",
+		"descripcion": "Envío del formulario con el correo completado y la contraseña vacía.",
+		"correo": "qa.login.valido@example.com",
+		"password": "",
+		"tipoPrueba": "Negativa",
+		"criterioAceptacion": "CA03: Campos obligatorios",
+		"resultadoEsperado": "El sistema muestra una validación del campo obligatorio contraseña."
+	},
+	{
+		"id": "LOGIN-006",
+		"descripcion": "Envío del formulario con ambos campos vacíos.",
+		"correo": "",
+		"password": "",
+		"tipoPrueba": "Negativa",
+		"criterioAceptacion": "CA03: Campos obligatorios",
+		"resultadoEsperado": "El sistema muestra una validación de los campos obligatorios; el comportamiento específico para ambos campos vacíos está pendiente de definición."
+	},
+	{
+		"id": "LOGIN-007",
+		"descripcion": "Intento de inicio de sesión con un correo de formato inválido.",
+		"correo": "correo-sin-formato-valido",
+		"password": "Ficticia-Login-04!",
+		"tipoPrueba": "Negativa",
+		"criterioAceptacion": "Pendiente de definición; la historia no especifica el tratamiento del formato de correo inválido.",
+		"resultadoEsperado": "Pendiente de definición."
+	},
+	{
+		"id": "LOGIN-008",
+		"descripcion": "Intento de inicio de sesión con una contraseña que contiene espacios.",
+		"correo": "qa.login.valido@example.com",
+		"password": "Ficticia con espacios 05",
+		"tipoPrueba": "Exploratoria",
+		"criterioAceptacion": "Pendiente de definición; la historia no especifica el tratamiento de espacios en la contraseña.",
+		"resultadoEsperado": "Pendiente de definición."
+	},
+	{
+		"id": "LOGIN-009",
+		"descripcion": "Intento de inicio de sesión con el correo del usuario de prueba escrito en mayúsculas.",
+		"correo": "QA.LOGIN.VALIDO@EXAMPLE.COM",
+		"password": "Ficticia-Login-01!",
+		"tipoPrueba": "Exploratoria",
+		"criterioAceptacion": "Pendiente de definición; la historia no especifica si el correo distingue entre mayúsculas y minúsculas.",
+		"resultadoEsperado": "Pendiente de definición."
+	},
+	{
+		"id": "LOGIN-010",
+		"descripcion": "Intento de inicio de sesión con una contraseña que contiene caracteres especiales.",
+		"correo": "qa.login.valido@example.com",
+		"password": "Ficticia-Login-06!#_$",
+		"tipoPrueba": "Exploratoria",
+		"criterioAceptacion": "Pendiente de definición; la historia no especifica restricciones sobre caracteres especiales en la contraseña.",
+		"resultadoEsperado": "Pendiente de definición."
+	}
+]
